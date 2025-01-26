@@ -7,12 +7,21 @@
 
 import Foundation
 
-struct PromotionContent: Codable {
+struct PromotionContent: Codable, Identifiable {
+    
+    let id: UUID = UUID()
+    
     let target: String
     let title: String
     let elementType: String?
     
     var targetURL: URL? {
-        URL(string: target)
+        URL(string: target.strippedWebDataPrefix)
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case target
+        case title
+        case elementType = "elementType"
     }
 }

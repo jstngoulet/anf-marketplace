@@ -7,7 +7,9 @@
 import Foundation
 import UIKit
 
-struct Promotion: Codable {
+struct Promotion: Codable, Identifiable {
+    
+    let id: UUID = UUID()
     
     let title: String
     let backgroundImagePath: String

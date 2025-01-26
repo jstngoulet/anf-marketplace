@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,14 @@
 		3E727EDF2672708B006C11AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E727EDD2672708B006C11AC /* LaunchScreen.storyboard */; };
 		3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */; };
 		3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */; };
+		42E354E02D442A7200809A3F /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354DF2D442A5300809A3F /* Promotion.swift */; };
+		42E354E22D442B9D00809A3F /* PromotionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354E12D442B9A00809A3F /* PromotionContent.swift */; };
+		42E354E42D442ECE00809A3F /* ExploreContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354E32D442ECE00809A3F /* ExploreContentCell.swift */; };
+		42E354E92D443C8900809A3F /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354E82D443C8500809A3F /* String+Ext.swift */; };
+		42E354ED2D44461C00809A3F /* PromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354EC2D44461C00809A3F /* PromotionView.swift */; };
+		42E354EF2D4446F800809A3F /* ANFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354EE2D4446F800809A3F /* ANFImageView.swift */; };
+		42E355182D456F5700809A3F /* BorderedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355172D456F5700809A3F /* BorderedButtonStyle.swift */; };
+		42E3551A2D458BA900809A3F /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355192D458BA400809A3F /* AttributedText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,14 @@
 		3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardTableViewControllerTests.swift; sourceTree = "<group>"; };
 		3E727EEB2672708B006C11AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardTableViewController.swift; sourceTree = "<group>"; };
+		42E354DF2D442A5300809A3F /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
+		42E354E12D442B9A00809A3F /* PromotionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionContent.swift; sourceTree = "<group>"; };
+		42E354E32D442ECE00809A3F /* ExploreContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreContentCell.swift; sourceTree = "<group>"; };
+		42E354E82D443C8500809A3F /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		42E354EC2D44461C00809A3F /* PromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionView.swift; sourceTree = "<group>"; };
+		42E354EE2D4446F800809A3F /* ANFImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFImageView.swift; sourceTree = "<group>"; };
+		42E355172D456F5700809A3F /* BorderedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButtonStyle.swift; sourceTree = "<group>"; };
+		42E355192D458BA400809A3F /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +97,10 @@
 		3E727ED126727088006C11AC /* ANF Code Test */ = {
 			isa = PBXGroup;
 			children = (
-				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
+				42E354E72D443C7E00809A3F /* Utilities */,
+				42E354E52D442F5500809A3F /* Views */,
+				42E354DE2D442A3600809A3F /* ViewModels */,
+				42E354DD2D442A2100809A3F /* Models */,
 				3E727ED226727088006C11AC /* AppDelegate.swift */,
 				3E727ED426727088006C11AC /* SceneDelegate.swift */,
 				3E727ED826727088006C11AC /* Main.storyboard */,
@@ -100,6 +119,59 @@
 				3E727EEB2672708B006C11AC /* Info.plist */,
 			);
 			path = "ANF Code TestTests";
+			sourceTree = "<group>";
+		};
+		42E354DD2D442A2100809A3F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42E354E12D442B9A00809A3F /* PromotionContent.swift */,
+				42E354DF2D442A5300809A3F /* Promotion.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		42E354DE2D442A3600809A3F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		42E354E52D442F5500809A3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				42E355142D456C8400809A3F /* Buttons */,
+				42E354E62D4432D100809A3F /* Cells */,
+				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
+				42E354EE2D4446F800809A3F /* ANFImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		42E354E62D4432D100809A3F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				42E354E32D442ECE00809A3F /* ExploreContentCell.swift */,
+				42E354EC2D44461C00809A3F /* PromotionView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		42E354E72D443C7E00809A3F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				42E355192D458BA400809A3F /* AttributedText.swift */,
+				42E354E82D443C8500809A3F /* String+Ext.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		42E355142D456C8400809A3F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				42E355172D456F5700809A3F /* BorderedButtonStyle.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +218,9 @@
 		3E727EC726727088006C11AC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					3E727ECE26727088006C11AC = {
 						CreatedOnToolsVersion = 12.5;
@@ -203,9 +276,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E3551A2D458BA900809A3F /* AttributedText.swift in Sources */,
+				42E354ED2D44461C00809A3F /* PromotionView.swift in Sources */,
 				3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */,
+				42E354EF2D4446F800809A3F /* ANFImageView.swift in Sources */,
+				42E354E92D443C8900809A3F /* String+Ext.swift in Sources */,
+				42E355182D456F5700809A3F /* BorderedButtonStyle.swift in Sources */,
+				42E354E22D442B9D00809A3F /* PromotionContent.swift in Sources */,
+				42E354E02D442A7200809A3F /* Promotion.swift in Sources */,
 				3E727ED326727088006C11AC /* AppDelegate.swift in Sources */,
 				3E727ED526727088006C11AC /* SceneDelegate.swift in Sources */,
+				42E354E42D442ECE00809A3F /* ExploreContentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +366,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -347,6 +429,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -372,7 +455,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RAHE33U4ZS;
+				DEVELOPMENT_TEAM = HSA2LNH32G;
 				INFOPLIST_FILE = "ANF Code Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,7 +476,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RAHE33U4ZS;
+				DEVELOPMENT_TEAM = HSA2LNH32G;
 				INFOPLIST_FILE = "ANF Code Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -410,7 +493,6 @@
 		3E727EFD2672708B006C11AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -432,7 +514,6 @@
 		3E727EFE2672708B006C11AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
