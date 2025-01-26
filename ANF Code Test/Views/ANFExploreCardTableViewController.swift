@@ -15,6 +15,16 @@ class ANFExploreCardTableViewController: UITableViewController {
             forCellReuseIdentifier: "ExploreContentCell"
         )
         tableView.estimatedRowHeight = 125
+        
+        
+        
+        Task {
+            do {
+                self.exploreData = try await ANFExplore.getMarketplaceData().promotions
+            } catch {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     private lazy var exploreData: [Promotion]? = {
@@ -24,7 +34,13 @@ class ANFExploreCardTableViewController: UITableViewController {
             return jsonDictionaryArray
         }
         return nil
-    }()
+    }() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         exploreData?.count ?? 0

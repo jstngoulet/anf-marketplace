@@ -68,7 +68,11 @@ class ImageLoader: ObservableObject {
             self.img = placeholder
         }
         
-        guard let url = URL(string: path) else { return }
+        //  Only Load Remote URLs
+        guard let url = URL(string: path),
+              url.absoluteString.starts(with: "http")
+        else { return }
+        
         Task {
             do {
                 let (data, _)  = try await URLSession.shared.data(from: url)

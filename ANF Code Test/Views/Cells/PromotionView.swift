@@ -27,7 +27,7 @@ struct PromotionView: View {
             
             ANFImageView(
                 image: loadedImage,
-                remotePath: "https://placecats.com/500/400",
+                remotePath: promotiom.backgroundImagePath,
                 loadCompletion: { img in
                     self.loadedImage = img
                 }
