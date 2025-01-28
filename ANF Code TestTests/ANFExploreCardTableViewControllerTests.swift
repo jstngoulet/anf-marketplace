@@ -11,8 +11,9 @@ class ANFExploreCardTableViewControllerTests: XCTestCase {
 
     var testInstance: ANFExploreCardTableViewController!
     
-    override func setUp() {
-        testInstance = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? ANFExploreCardTableViewController
+    override func setUp() async throws {
+        testInstance = await UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? ANFExploreCardTableViewController
+        await testInstance.loadContent()
     }
 
     func test_numberOfSections_ShouldBeOne() {
@@ -22,7 +23,7 @@ class ANFExploreCardTableViewControllerTests: XCTestCase {
     
     func test_numberOfRows_ShouldBeTen() {
         let numberOfRows = testInstance.tableView(testInstance.tableView, numberOfRowsInSection: 0)
-        XCTAssert(numberOfRows == 10, "table view should have 10 cells")
+        XCTAssert(numberOfRows == 10, "table view should have 10 cells. \(numberOfRows) found")
     }
     
     func test_cellForRowAtIndexPath_titleText_shouldNotBeBlank() {
@@ -35,5 +36,9 @@ class ANFExploreCardTableViewControllerTests: XCTestCase {
         let firstCell = testInstance.tableView(testInstance.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
         let imageView = firstCell.viewWithTag(2) as? UIImageView
         XCTAssert(imageView?.image != nil, "image view image should not be nil")
+    }
+    
+    func test_exploreData_remoteFetch() {
+        XCTAssert(testInstance.exploreData?.isEmpty == false, "remote data fetch failed")
     }
 }

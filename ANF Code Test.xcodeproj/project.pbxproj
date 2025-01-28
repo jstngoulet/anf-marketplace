@@ -15,18 +15,40 @@
 		3E727EDF2672708B006C11AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E727EDD2672708B006C11AC /* LaunchScreen.storyboard */; };
 		3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */; };
 		3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */; };
+		4299640D2D485C5200DE93D1 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299640C2D485C4F00DE93D1 /* UIView+Ext.swift */; };
+		4299640F2D485C8800DE93D1 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299640E2D485C8500DE93D1 /* CGFloat+Ext.swift */; };
+		429964112D48612500DE93D1 /* ANFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429964102D48612000DE93D1 /* ANFButton.swift */; };
+		429964132D486AA500DE93D1 /* ANFClickableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429964122D486AA500DE93D1 /* ANFClickableLabel.swift */; };
+		429964142D486AA500DE93D1 /* ANFClickableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429964122D486AA500DE93D1 /* ANFClickableLabel.swift */; };
+		429964162D486EB300DE93D1 /* MultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429964152D486EB000DE93D1 /* MultilineLabel.swift */; };
 		42E354E02D442A7200809A3F /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354DF2D442A5300809A3F /* Promotion.swift */; };
 		42E354E22D442B9D00809A3F /* PromotionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354E12D442B9A00809A3F /* PromotionContent.swift */; };
-		42E354E42D442ECE00809A3F /* ExploreContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354E32D442ECE00809A3F /* ExploreContentCell.swift */; };
 		42E354E92D443C8900809A3F /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354E82D443C8500809A3F /* String+Ext.swift */; };
-		42E354ED2D44461C00809A3F /* PromotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354EC2D44461C00809A3F /* PromotionView.swift */; };
-		42E354EF2D4446F800809A3F /* ANFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E354EE2D4446F800809A3F /* ANFImageView.swift */; };
-		42E355182D456F5700809A3F /* BorderedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355172D456F5700809A3F /* BorderedButtonStyle.swift */; };
-		42E3551A2D458BA900809A3F /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355192D458BA400809A3F /* AttributedText.swift */; };
+		42E355202D46C4F700809A3F /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3551F2D46C4F300809A3F /* RESTClient.swift */; };
+		42E355222D46C55E00809A3F /* ANFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355212D46C55400809A3F /* ANFRequest.swift */; };
+		42E355242D46C59000809A3F /* ANFRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355232D46C57900809A3F /* ANFRequestMethod.swift */; };
+		42E355262D46C62C00809A3F /* ANFResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355252D46C62900809A3F /* ANFResponse.swift */; };
+		42E355282D46C7BB00809A3F /* ANFHosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355272D46C7B700809A3F /* ANFHosts.swift */; };
+		42E3552A2D46C93D00809A3F /* CodeTest-ExploreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355292D46C92A00809A3F /* CodeTest-ExploreData.swift */; };
+		42E3552D2D46CC2000809A3F /* ANFExplore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3552C2D46CC1600809A3F /* ANFExplore.swift */; };
+		42E3552F2D46CC3A00809A3F /* ANFDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3552E2D46CC3800809A3F /* ANFDomain.swift */; };
+		42E355322D46CF9100809A3F /* CodeTestExploreDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355312D46CF8900809A3F /* CodeTestExploreDataResponse.swift */; };
+		42E355362D46E81200809A3F /* ExploreMarketplaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355352D46E80B00809A3F /* ExploreMarketplaceCell.swift */; };
+		42E355392D46F01B00809A3F /* ConstraintHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355372D46F01B00809A3F /* ConstraintHelpers.swift */; };
+		42E3553A2D46F01B00809A3F /* ConstraintHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E355372D46F01B00809A3F /* ConstraintHelpers.swift */; };
+		42E3553E2D46F41200809A3F /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3553C2D46F41200809A3F /* ImageProvider.swift */; };
+		42E3553F2D46F41200809A3F /* ImageProvider+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E3553D2D46F41200809A3F /* ImageProvider+UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		3E727EE62672708B006C11AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E727EC726727088006C11AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E727ECE26727088006C11AC;
+			remoteInfo = "ANF Code Test";
+		};
+		429964322D49777700DE93D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3E727EC726727088006C11AC /* Project object */;
 			proxyType = 1;
@@ -48,15 +70,33 @@
 		3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardTableViewControllerTests.swift; sourceTree = "<group>"; };
 		3E727EEB2672708B006C11AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardTableViewController.swift; sourceTree = "<group>"; };
+		4299640C2D485C4F00DE93D1 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		4299640E2D485C8500DE93D1 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		429964102D48612000DE93D1 /* ANFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFButton.swift; sourceTree = "<group>"; };
+		429964122D486AA500DE93D1 /* ANFClickableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFClickableLabel.swift; sourceTree = "<group>"; };
+		429964152D486EB000DE93D1 /* MultilineLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineLabel.swift; sourceTree = "<group>"; };
+		4299642C2D49777700DE93D1 /* ANF Code TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ANF Code TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E354DF2D442A5300809A3F /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
 		42E354E12D442B9A00809A3F /* PromotionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionContent.swift; sourceTree = "<group>"; };
-		42E354E32D442ECE00809A3F /* ExploreContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreContentCell.swift; sourceTree = "<group>"; };
 		42E354E82D443C8500809A3F /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
-		42E354EC2D44461C00809A3F /* PromotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionView.swift; sourceTree = "<group>"; };
-		42E354EE2D4446F800809A3F /* ANFImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFImageView.swift; sourceTree = "<group>"; };
-		42E355172D456F5700809A3F /* BorderedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButtonStyle.swift; sourceTree = "<group>"; };
-		42E355192D458BA400809A3F /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
+		42E3551F2D46C4F300809A3F /* RESTClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTClient.swift; sourceTree = "<group>"; };
+		42E355212D46C55400809A3F /* ANFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFRequest.swift; sourceTree = "<group>"; };
+		42E355232D46C57900809A3F /* ANFRequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFRequestMethod.swift; sourceTree = "<group>"; };
+		42E355252D46C62900809A3F /* ANFResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFResponse.swift; sourceTree = "<group>"; };
+		42E355272D46C7B700809A3F /* ANFHosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFHosts.swift; sourceTree = "<group>"; };
+		42E355292D46C92A00809A3F /* CodeTest-ExploreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodeTest-ExploreData.swift"; sourceTree = "<group>"; };
+		42E3552C2D46CC1600809A3F /* ANFExplore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExplore.swift; sourceTree = "<group>"; };
+		42E3552E2D46CC3800809A3F /* ANFDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFDomain.swift; sourceTree = "<group>"; };
+		42E355312D46CF8900809A3F /* CodeTestExploreDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTestExploreDataResponse.swift; sourceTree = "<group>"; };
+		42E355352D46E80B00809A3F /* ExploreMarketplaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMarketplaceCell.swift; sourceTree = "<group>"; };
+		42E355372D46F01B00809A3F /* ConstraintHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintHelpers.swift; sourceTree = "<group>"; };
+		42E3553C2D46F41200809A3F /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		42E3553D2D46F41200809A3F /* ImageProvider+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageProvider+UIImageView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4299642D2D49777700DE93D1 /* ANF Code TestUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "ANF Code TestUITests"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3E727ECC26727088006C11AC /* Frameworks */ = {
@@ -73,6 +113,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		429964292D49777700DE93D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,6 +128,7 @@
 			children = (
 				3E727ED126727088006C11AC /* ANF Code Test */,
 				3E727EE82672708B006C11AC /* ANF Code TestTests */,
+				4299642D2D49777700DE93D1 /* ANF Code TestUITests */,
 				3E727ED026727088006C11AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +138,7 @@
 			children = (
 				3E727ECF26727088006C11AC /* ANF Code Test.app */,
 				3E727EE52672708B006C11AC /* ANF Code TestTests.xctest */,
+				4299642C2D49777700DE93D1 /* ANF Code TestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,7 +148,6 @@
 			children = (
 				42E354E72D443C7E00809A3F /* Utilities */,
 				42E354E52D442F5500809A3F /* Views */,
-				42E354DE2D442A3600809A3F /* ViewModels */,
 				42E354DD2D442A2100809A3F /* Models */,
 				3E727ED226727088006C11AC /* AppDelegate.swift */,
 				3E727ED426727088006C11AC /* SceneDelegate.swift */,
@@ -121,29 +169,40 @@
 			path = "ANF Code TestTests";
 			sourceTree = "<group>";
 		};
+		429964172D486FBC00DE93D1 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				429964122D486AA500DE93D1 /* ANFClickableLabel.swift */,
+				429964152D486EB000DE93D1 /* MultilineLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		429964182D48713500DE93D1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		42E354DD2D442A2100809A3F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				42E3551C2D46C49D00809A3F /* API */,
 				42E354E12D442B9A00809A3F /* PromotionContent.swift */,
 				42E354DF2D442A5300809A3F /* Promotion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		42E354DE2D442A3600809A3F /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		42E354E52D442F5500809A3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				429964182D48713500DE93D1 /* Controllers */,
+				429964172D486FBC00DE93D1 /* Labels */,
 				42E355142D456C8400809A3F /* Buttons */,
 				42E354E62D4432D100809A3F /* Cells */,
-				3E727F02267281F7006C11AC /* ANFExploreCardTableViewController.swift */,
-				42E354EE2D4446F800809A3F /* ANFImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,8 +210,7 @@
 		42E354E62D4432D100809A3F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				42E354E32D442ECE00809A3F /* ExploreContentCell.swift */,
-				42E354EC2D44461C00809A3F /* PromotionView.swift */,
+				42E355352D46E80B00809A3F /* ExploreMarketplaceCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -160,8 +218,10 @@
 		42E354E72D443C7E00809A3F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				42E355192D458BA400809A3F /* AttributedText.swift */,
+				4299640E2D485C8500DE93D1 /* CGFloat+Ext.swift */,
+				4299640C2D485C4F00DE93D1 /* UIView+Ext.swift */,
 				42E354E82D443C8500809A3F /* String+Ext.swift */,
+				42E355382D46F01B00809A3F /* constraints */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -169,9 +229,75 @@
 		42E355142D456C8400809A3F /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				42E355172D456F5700809A3F /* BorderedButtonStyle.swift */,
+				429964102D48612000DE93D1 /* ANFButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		42E3551C2D46C49D00809A3F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				42E3553B2D46F40900809A3F /* Images */,
+				42E355302D46CF7100809A3F /* Responses */,
+				42E3552B2D46CC0D00809A3F /* Domains */,
+				42E3551E2D46C4E400809A3F /* Requests */,
+				42E3551D2D46C4D900809A3F /* REST Client */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		42E3551D2D46C4D900809A3F /* REST Client */ = {
+			isa = PBXGroup;
+			children = (
+				42E355272D46C7B700809A3F /* ANFHosts.swift */,
+				42E355232D46C57900809A3F /* ANFRequestMethod.swift */,
+				42E355212D46C55400809A3F /* ANFRequest.swift */,
+				42E3551F2D46C4F300809A3F /* RESTClient.swift */,
+			);
+			path = "REST Client";
+			sourceTree = "<group>";
+		};
+		42E3551E2D46C4E400809A3F /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				42E355292D46C92A00809A3F /* CodeTest-ExploreData.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		42E3552B2D46CC0D00809A3F /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				42E3552E2D46CC3800809A3F /* ANFDomain.swift */,
+				42E3552C2D46CC1600809A3F /* ANFExplore.swift */,
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		42E355302D46CF7100809A3F /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				42E355312D46CF8900809A3F /* CodeTestExploreDataResponse.swift */,
+				42E355252D46C62900809A3F /* ANFResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		42E355382D46F01B00809A3F /* constraints */ = {
+			isa = PBXGroup;
+			children = (
+				42E355372D46F01B00809A3F /* ConstraintHelpers.swift */,
+			);
+			path = constraints;
+			sourceTree = "<group>";
+		};
+		42E3553B2D46F40900809A3F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				42E3553C2D46F41200809A3F /* ImageProvider.swift */,
+				42E3553D2D46F41200809A3F /* ImageProvider+UIImageView.swift */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +338,29 @@
 			productReference = 3E727EE52672708B006C11AC /* ANF Code TestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		4299642B2D49777700DE93D1 /* ANF Code TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 429964342D49777700DE93D1 /* Build configuration list for PBXNativeTarget "ANF Code TestUITests" */;
+			buildPhases = (
+				429964282D49777700DE93D1 /* Sources */,
+				429964292D49777700DE93D1 /* Frameworks */,
+				4299642A2D49777700DE93D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				429964332D49777700DE93D1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4299642D2D49777700DE93D1 /* ANF Code TestUITests */,
+			);
+			name = "ANF Code TestUITests";
+			packageProductDependencies = (
+			);
+			productName = "ANF Code TestUITests";
+			productReference = 4299642C2D49777700DE93D1 /* ANF Code TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -219,7 +368,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					3E727ECE26727088006C11AC = {
@@ -227,6 +376,10 @@
 					};
 					3E727EE42672708B006C11AC = {
 						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 3E727ECE26727088006C11AC;
+					};
+					4299642B2D49777700DE93D1 = {
+						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 3E727ECE26727088006C11AC;
 					};
 				};
@@ -246,6 +399,7 @@
 			targets = (
 				3E727ECE26727088006C11AC /* ANF Code Test */,
 				3E727EE42672708B006C11AC /* ANF Code TestTests */,
+				4299642B2D49777700DE93D1 /* ANF Code TestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,6 +423,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4299642A2D49777700DE93D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -276,17 +437,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42E3551A2D458BA900809A3F /* AttributedText.swift in Sources */,
-				42E354ED2D44461C00809A3F /* PromotionView.swift in Sources */,
+				42E3552A2D46C93D00809A3F /* CodeTest-ExploreData.swift in Sources */,
 				3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */,
-				42E354EF2D4446F800809A3F /* ANFImageView.swift in Sources */,
+				4299640F2D485C8800DE93D1 /* CGFloat+Ext.swift in Sources */,
+				42E355362D46E81200809A3F /* ExploreMarketplaceCell.swift in Sources */,
+				429964112D48612500DE93D1 /* ANFButton.swift in Sources */,
+				429964142D486AA500DE93D1 /* ANFClickableLabel.swift in Sources */,
+				42E3552F2D46CC3A00809A3F /* ANFDomain.swift in Sources */,
+				42E355202D46C4F700809A3F /* RESTClient.swift in Sources */,
 				42E354E92D443C8900809A3F /* String+Ext.swift in Sources */,
-				42E355182D456F5700809A3F /* BorderedButtonStyle.swift in Sources */,
+				42E355322D46CF9100809A3F /* CodeTestExploreDataResponse.swift in Sources */,
 				42E354E22D442B9D00809A3F /* PromotionContent.swift in Sources */,
+				42E355242D46C59000809A3F /* ANFRequestMethod.swift in Sources */,
 				42E354E02D442A7200809A3F /* Promotion.swift in Sources */,
+				42E3552D2D46CC2000809A3F /* ANFExplore.swift in Sources */,
+				42E355262D46C62C00809A3F /* ANFResponse.swift in Sources */,
+				42E355222D46C55E00809A3F /* ANFRequest.swift in Sources */,
 				3E727ED326727088006C11AC /* AppDelegate.swift in Sources */,
 				3E727ED526727088006C11AC /* SceneDelegate.swift in Sources */,
-				42E354E42D442ECE00809A3F /* ExploreContentCell.swift in Sources */,
+				42E3553E2D46F41200809A3F /* ImageProvider.swift in Sources */,
+				42E3553F2D46F41200809A3F /* ImageProvider+UIImageView.swift in Sources */,
+				4299640D2D485C5200DE93D1 /* UIView+Ext.swift in Sources */,
+				429964162D486EB300DE93D1 /* MultilineLabel.swift in Sources */,
+				42E355392D46F01B00809A3F /* ConstraintHelpers.swift in Sources */,
+				42E355282D46C7BB00809A3F /* ANFHosts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +468,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				429964132D486AA500DE93D1 /* ANFClickableLabel.swift in Sources */,
+				42E3553A2D46F01B00809A3F /* ConstraintHelpers.swift in Sources */,
 				3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		429964282D49777700DE93D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +488,11 @@
 			isa = PBXTargetDependency;
 			target = 3E727ECE26727088006C11AC /* ANF Code Test */;
 			targetProxy = 3E727EE62672708B006C11AC /* PBXContainerItemProxy */;
+		};
+		429964332D49777700DE93D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E727ECE26727088006C11AC /* ANF Code Test */;
+			targetProxy = 429964322D49777700DE93D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -381,6 +569,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_ERRORS = NO;
+				IBSC_NOTICES = NO;
+				IBSC_WARNINGS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -438,6 +629,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_ERRORS = NO;
+				IBSC_NOTICES = NO;
+				IBSC_WARNINGS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -532,6 +726,51 @@
 			};
 			name = Release;
 		};
+		429964352D49777700DE93D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HSA2LNH32G;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jstngoulet.ANF-Code-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ANF Code Test";
+			};
+			name = Debug;
+		};
+		429964362D49777700DE93D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HSA2LNH32G;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jstngoulet.ANF-Code-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ANF Code Test";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -558,6 +797,15 @@
 			buildConfigurations = (
 				3E727EFD2672708B006C11AC /* Debug */,
 				3E727EFE2672708B006C11AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		429964342D49777700DE93D1 /* Build configuration list for PBXNativeTarget "ANF Code TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				429964352D49777700DE93D1 /* Debug */,
+				429964362D49777700DE93D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
