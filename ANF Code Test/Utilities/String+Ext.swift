@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
     
     var htmlString: NSAttributedString? {
         guard let data = data(using: .utf8),

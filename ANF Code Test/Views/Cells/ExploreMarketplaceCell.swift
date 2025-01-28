@@ -13,6 +13,7 @@ class ExploreMarketplaceCell: UITableViewCell {
         let img = UIImageView()
         img.contentMode = .scaleAspectFit
         img.clipsToBounds = true
+        img.tag = 2
         return img
     }()
     
@@ -27,6 +28,7 @@ class ExploreMarketplaceCell: UITableViewCell {
     private lazy var titleLabel: MultilineLabel = {
         let lbl = MultilineLabel()
         lbl.font = .systemFont(ofSize: 17, weight: .bold)
+        lbl.tag = 1
         return lbl
     }()
     

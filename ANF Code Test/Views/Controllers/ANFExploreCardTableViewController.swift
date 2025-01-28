@@ -10,23 +10,27 @@ class ANFExploreCardTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.estimatedRowHeight = 400
+        tableView.estimatedRowHeight = view.frame.height
         tableView.rowHeight = UITableView.automaticDimension
         
         Task {
-            do {
-                self.exploreData = try await ANFExplore.getMarketplaceData().promotions
-                
-                await MainActor.run {
-                    self.tableView.reloadData()
-                }
-            } catch {
-                print("Error: \(error.localizedDescription)")
-            }
+            await loadContent()
         }
     }
     
-    private var exploreData: [Promotion]?
+    private(set) var exploreData: [Promotion]?
+    
+    func loadContent() async {
+        do {
+            self.exploreData = try await ANFExplore.getMarketplaceData().promotions
+            
+            await MainActor.run {
+                self.tableView.reloadData()
+            }
+        } catch {
+            print("Error: \(error.localizedDescription)")
+        }
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         exploreData?.count ?? 0
