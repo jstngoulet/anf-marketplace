@@ -10,37 +10,23 @@ class ANFExploreCardTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(
-            HostingTableViewCell<PromotionView>.self,
-            forCellReuseIdentifier: "ExploreContentCell"
-        )
-        tableView.estimatedRowHeight = 125
-        
-        
+        tableView.estimatedRowHeight = 400
+        tableView.rowHeight = UITableView.automaticDimension
         
         Task {
             do {
                 self.exploreData = try await ANFExplore.getMarketplaceData().promotions
+                
+                await MainActor.run {
+                    self.tableView.reloadData()
+                }
             } catch {
                 print("Error: \(error.localizedDescription)")
             }
         }
     }
     
-    private lazy var exploreData: [Promotion]? = {
-        if let filePath = Bundle.main.path(forResource: "exploreData", ofType: "json"),
-           let fileContent = try? Data(contentsOf: URL(fileURLWithPath: filePath)),
-           let jsonDictionaryArray = try? JSONDecoder().decode([Promotion].self, from: fileContent) {
-            return jsonDictionaryArray
-        }
-        return nil
-    }() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+    private var exploreData: [Promotion]?
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         exploreData?.count ?? 0
@@ -53,18 +39,11 @@ class ANFExploreCardTableViewController: UITableViewController {
             for: indexPath
         )
         
-        guard let promoCell = cell as? HostingTableViewCell<PromotionView>
-                , let cellData = exploreData?[indexPath.row]
+        guard let promoCell = cell as? ExploreMarketplaceCell
+                , let data = exploreData?[indexPath.row]
         else { return cell }
         
-        var promoView = PromotionView(promotiom: cellData)
-        promoView.set(htmlDescription: cellData.bottomDescription?.htmlString)
-        
-        promoCell.set(
-            rootView: promoView,
-            parentController: self
-        )
-        
+        promoCell.set(promotion: data)
         return promoCell
     }
 }

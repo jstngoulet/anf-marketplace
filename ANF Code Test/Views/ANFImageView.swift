@@ -14,12 +14,9 @@ struct ANFImageView: View {
     @State private var image: Image
     @State private var remotePath: String
     
-    var completion: (Image) -> Void = {_ in }
-    
-    init(image: Image, remotePath: String, loadCompletion: @escaping (Image) -> Void){
+    init(image: Image, remotePath: String){
         self.image = image
         self.remotePath = remotePath
-        self.completion = loadCompletion
         loadImage(urlString: remotePath, placeholder: image)
     }
     
@@ -32,7 +29,6 @@ struct ANFImageView: View {
             .onReceive(imageLoader.dataPublisher) { data in
                 if data == image { return }
                 self.image = data
-                self.completion(data)
             }
     }
     
@@ -45,13 +41,18 @@ struct ANFImageView: View {
     VStack {
         ANFImageView(
             image: Image("anf-US-20160601-app-women-dresses"),
-            remotePath: "https://placecats.com/300/200",
-            loadCompletion: {_ in }
+            remotePath: "https://placecats.com/300/200"
         )
     }
 }
 
 class ImageLoader: ObservableObject {
+    
+    private static var cache: NSCache = {
+       var newCache = NSCache<NSString, UIImage>()
+        newCache.countLimit = 100
+        return newCache
+    }()
     
     var dataPublisher = PassthroughSubject<Image, Never>()
     
@@ -73,10 +74,17 @@ class ImageLoader: ObservableObject {
               url.absoluteString.starts(with: "http")
         else { return }
         
+        if let imge = ImageLoader.cache.object(forKey: path as NSString) {
+            self.img = Image(uiImage: imge)
+            return
+        }
+        
         Task {
             do {
                 let (data, _)  = try await URLSession.shared.data(from: url)
-                img = Image(uiImage: UIImage(data: data) ?? UIImage())
+                guard let newImage = UIImage(data: data) else { return }
+                img = Image(uiImage:newImage)
+                ImageLoader.cache.setObject(newImage, forKey: path as NSString)
             } catch {
                 print("Could not load image: \(url.absoluteString), error: \(error.localizedDescription)")
             }
