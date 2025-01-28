@@ -7,14 +7,16 @@
 
 import Foundation
 
+/**
+ The possible response to the data from the server.
+ Contract for provided request
+ */
 struct CodeTestExploreDataResponse: ANFResponse {
     
-    public enum CodeTestExploreResponseError: LocalizedError {
-        case fileNotFound
-    }
-    
+    /// List of promotions found
     var promotions: [Promotion]?
     
+    /// Parse the list of promotions to a result to use
     var result: Result<any Codable, any Error> {
         return if let promotions {
             .success(promotions)

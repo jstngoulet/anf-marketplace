@@ -7,16 +7,24 @@
 
 import Foundation
 
+/**
+ Parent Request class that can be triggered in the REST client
+ */
 class ANFRequest: NSObject, Identifiable {
     
+    /// The http request method
     private(set) var requestMethod: ANFRequestMethod = .get
     
+    /// The releative path of the request to the host
     private(set) var path: String = ""
     
+    /// the body, when provided, for the request
     private(set) var body: [String: AnyHashable]?
     
+    /// The unique identifer of the request, that can later be used to cancel or track
     let requestID: UUID = UUID()
     
+    /// Create the url by combining the host and the path
     var url: URL {
         let defaultURL: URL = ANFHosts.api
         let apiBase: String = defaultURL.absoluteString
@@ -30,6 +38,11 @@ class ANFRequest: NSObject, Identifiable {
         return url
     }
     
+    /// Default initializer that each child will call with their nique properties
+    /// - Parameters:
+    ///   - requestMethod:  The http method
+    ///   - path:           The request path
+    ///   - body:           The body of the request
     init(
         requestMethod: ANFRequestMethod,
         path: String,

@@ -7,8 +7,12 @@
 
 import Foundation
 
+/**
+ The request for the list of promotions from the server
+ */
 final class CodeTestExploreDataRequest: ANFRequest {
     
+    /// Initialize the request without any parameters (none required)
     init() {
         super.init(
             requestMethod: .get,

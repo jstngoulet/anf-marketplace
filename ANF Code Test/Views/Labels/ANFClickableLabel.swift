@@ -32,6 +32,7 @@ class ANFClickableLabel: UIView {
         lbl.tintColor = UIColor.lightGray
         lbl.textContainerInset = UIEdgeInsets.zero
         lbl.textContainer.lineFragmentPadding = 0
+        lbl.accessibilityIdentifier = "clickableLabel"
         return lbl
     }()
     
@@ -72,16 +73,21 @@ class ANFClickableLabel: UIView {
         accessibilityIdentifier = qaIdentifier
     }
     
+    /// Default initializer
     init() {
         super.init(frame: .zero)
         setup()
     }
     
+    /// When initialized from storyboard
+    /// - Parameter coder: The coder to init from (not used internally)
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }
     
+    /// Wrapper function to setup the view, regardless of storyboard or default
+    /// initializer
     private func setup() {
         build()
         
@@ -99,16 +105,6 @@ class ANFClickableLabel: UIView {
         label.sizeToFit()
         label.frame.size.width = currentWidth
         frame.size = label.frame.size
-    }
-    
-    /// Sets the formatted text of the string
-    /// - Parameter props: The string and link attributes
-    func set(_ props:(
-        formattedString: NSAttributedString,
-        linkAttributes: [NSAttributedString.Key: Any]
-    )) {
-        set(text: props.formattedString)
-        label.linkTextAttributes = props.linkAttributes
     }
     
     deinit {
@@ -136,6 +132,9 @@ extension ANFClickableLabel: UITextViewDelegate {
         if let stripped = NSURL(string: URL.absoluteString.strippedWebDataPrefix) {
             UIApplication.shared.open(stripped as URL)
         }
+        
+        //  Call the delegate, if used
+        delegate?.clicked(label: self, link: URL.absoluteString)
         
         return false
     }

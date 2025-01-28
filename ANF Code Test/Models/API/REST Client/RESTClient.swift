@@ -7,8 +7,14 @@
 
 import Foundation
 
+/**
+ Current base REST client
+ */
 final class RESTClient: NSObject {
     
+    /**
+     Provided errors that can be triggered within the client. DNI server error
+     */
     public enum ANFRestClientError: LocalizedError {
         case invalidURL(String)
         case badRequest
@@ -29,12 +35,18 @@ final class RESTClient: NSObject {
         }
     }
     
+    /// Singleton to provide auth headers (not set)
     private static var shared: RESTClient = RESTClient()
     
+    /// Additional headers to store in singleton
     private var additionalHeaders: [String: String] = [:]
     
+    /// Whether logging is enabled for requests
     static var isLoggingEnabled: Bool = false
     
+    /// Perform a request provided and return the data to be parsed.
+    /// - Parameter request:    The request to submit
+    /// - Returns:              The response data that can be decoded
     class func perform(request: ANFRequest) async throws -> Data {
         
         var urlRequest = URLRequest(url: request.url)
@@ -60,6 +72,3 @@ final class RESTClient: NSObject {
         return data
     }
 }
-
-//https://www.abercrombie.com/anf/nativeapp/qa/codetest/codeTest_exploreData.json
-//https://www.abercrombie.com/anf/nativeapp/qa/codetest/code_Test_exploreData.json

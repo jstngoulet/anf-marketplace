@@ -7,14 +7,29 @@
 
 import UIKit
 
+/**
+ Protocol for when the button is selected, so that the action is handled internally
+ but passed along to whichever class is listening (wrappers can enable multiple classes
+ to listen, and even trigger reactive events)
+ */
 protocol ANFButtonSelected: AnyObject {
     func button(selected: ANFButton, parent: UIView)
 }
 
+/**
+ Primary button class for a ANF button design, per spec
+ */
 class ANFButton: UIButton {
     
+    /// Delegate, when the button is selected
     weak var delegate: ANFButtonSelected?
     
+    /// Init the button with a title, accessibility identifer, accessibilty title and a delegate
+    /// - Parameters:
+    ///   - title:              The text to read on the cell
+    ///   - localizedId:        The identifier of the element
+    ///   - localizationTitle:  The title of the element
+    ///   - delegate:           The delegate listening to the button actions
     init(
         withTitle title: String
         , localizedId: String? = nil
@@ -34,6 +49,8 @@ class ANFButton: UIButton {
         applyStyle()
     }
     
+    /// When init from storyboard, should also assign action and delegate
+    /// - Parameter coder:      The coder to pass along to super
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
@@ -45,19 +62,24 @@ class ANFButton: UIButton {
         applyStyle()
     }
     
+    /// Apply the ßtyle to the button, per spec
     private func applyStyle() {
-        layer.borderColor = UIColor.black.cgColor
-        layer.borderWidth = 2
+        layer.borderColor = UIColor.gray.cgColor
+        layer.borderWidth = 1
         
-        setTitleColor(.black, for: .normal)
-        titleLabel?.font = .systemFont(ofSize: 17, weight: .bold)
+        setTitleColor(.gray, for: .normal)
+        titleLabel?.font = .systemFont(ofSize: 15, weight: .bold)
     }
 }
 
+//  MARK: - Actions
 extension ANFButton {
     
-    @objc func handleTap() {
+    /// Handle the tap of the view
+    @IBAction
+    func handleTap() {
         guard let delegate, let superview else { return }
+        print("Identifier: \(self.accessibilityIdentifier ?? "No Identifier")")
         delegate.button(selected: self, parent: superview)
     }
 }

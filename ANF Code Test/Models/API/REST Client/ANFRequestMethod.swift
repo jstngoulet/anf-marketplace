@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+ Different request methods (HTTP)
+ */
 @frozen
 public enum ANFRequestMethod: String {
     case get    = "GET"

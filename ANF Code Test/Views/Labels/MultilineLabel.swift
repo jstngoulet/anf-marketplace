@@ -6,17 +6,24 @@
 //
 import UIKit
 
+/**
+ Creates a multiline label by default with centered text
+ */
 final class MultilineLabel: UILabel {
     
+    /// Default initializer
     init() {
         super.init(frame: .zero)
         numberOfLines = 0
         textAlignment = .center
     }
     
-    @available(*, unavailable)
+    /// Initializer for storyboard creation
+    /// - Parameter coder: The coder passed along
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        numberOfLines = 0
+        textAlignment = .center
     }
     
 }

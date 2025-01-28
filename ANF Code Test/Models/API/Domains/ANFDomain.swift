@@ -7,4 +7,7 @@
 
 import Foundation
 
+/**
+ Parent class for a domain of requests
+ */
 class ANFDomain: NSObject {}
