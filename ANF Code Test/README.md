@@ -31,6 +31,8 @@ In order to ensure our data matched a consistent contract, the [exploreData](/AN
 
 Next, we wanted to update the cell in order to show more dynamic content. This cell follows the same requiremnts as earlier, having the key components being a resizable image view (based on the aspect ratio of the image), a clickable label for additional details, some customized buttons and finally some additional labels. The table below shows the before and after for each of the cells.
 
+The new cells were created in storyboard to be aligned with the inital view, however, due to the dynamic nature of what the promotions contain, the constraints for the layout are all handled in the code.
+
 | Before | After | 
 | ------ | ----- | 
 |![Before Image](/imgs/Screenshot%202025-01-28%20at%202.11.13 PM.png) | ![After Image](/imgs/Screenshot%202025-01-28%20at%202.11.47 PM.png)
@@ -52,4 +54,8 @@ When we get the data back from the REST client into our application, we now can 
 Finally, our project called for us to make sure that we updated our tests and added some more in order to address our new functionality. A new target was added so that we could test some of the new actions on the view, in addiiton to the original tests being updated to ensure that they match our new UI requirements.
 
 ### Conclusion
-While there are many decisions that came along during the 
+While there are many decisions that came along during the project, many were tied to the project requirements. Things like Loading Views, Zero/Empty State Views, dynamic placeholders and Analytics were all omitted to stick to the formal requirments of the project, however, could easily be added.
+
+If you have any further questions on the project, or would like additional information, please reach out to [justin.goulet@aolcom](mailto:justin.goulet+anf@aol.com) and I would be happy to assist. Thank you.
+
+- Justin Goulet
