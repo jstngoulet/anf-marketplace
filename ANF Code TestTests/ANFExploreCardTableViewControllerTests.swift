@@ -37,4 +37,8 @@ class ANFExploreCardTableViewControllerTests: XCTestCase {
         let imageView = firstCell.viewWithTag(2) as? UIImageView
         XCTAssert(imageView?.image != nil, "image view image should not be nil")
     }
+    
+    func test_exploreData_remoteFetch() {
+        XCTAssert(testInstance.exploreData?.isEmpty == false, "remote data fetch failed")
+    }
 }
